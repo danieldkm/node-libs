@@ -1,4 +1,4 @@
-import { mergeScan, Observable, of, scan, switchMap, throttleTime } from 'rxjs';
+import {  Observable, of, scan, switchMap, throttleTime } from 'rxjs';
 
 const observable = new Observable(subscriber => {
   subscriber.next(1);

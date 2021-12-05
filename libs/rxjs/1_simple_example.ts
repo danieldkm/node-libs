@@ -1,4 +1,4 @@
-import { iif, of } from 'rxjs';
+import { iif, interval, of } from 'rxjs';
 
 let subscribeToFirst;
 const firstOrSecond = iif(
@@ -18,3 +18,5 @@ firstOrSecond.subscribe(value => console.log(value));
 
 // Logs:
 // "second"
+
+

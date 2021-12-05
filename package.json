@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "rxjs": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules libs/rxjs/index.ts"
+    "base": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules",
+    "rxjs:index": "yarn base libs/rxjs/index.ts",
+    "rxjs:from": "yarn base libs/rxjs/4_from.ts",
+    "rxjs:iff": "yarn base libs/rxjs/5_iff.ts"
   },
   "repository": {
     "type": "git",
