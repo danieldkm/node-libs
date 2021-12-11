@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "base": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules",
+    "base": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules -r dotenv/config",
     "rxjs:index": "yarn base libs/rxjs/index.ts",
     "rxjs:from": "yarn base libs/rxjs/4_from.ts",
-    "rxjs:iff": "yarn base libs/rxjs/5_iff.ts"
+    "rxjs:iff": "yarn base libs/rxjs/5_iff.ts",
+    "brvalues": "yarn base libs/brazilian-values/index.ts"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,12 @@
   },
   "homepage": "https://github.com/danieldkm/javascript-libs#readme",
   "dependencies": {
+    "brazilian-values": "^0.10.1",
+    "debug": "^4.3.3",
     "rxjs": "^7.4.0"
   },
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.2"
   }
